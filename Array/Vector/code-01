@@ -1,0 +1,10 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<char>nums;
+        nums.push_back(8);
+        cout <<  nums.size() <<endl;
+
+return (0);
+}
