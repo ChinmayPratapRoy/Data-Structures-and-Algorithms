@@ -1,4 +1,17 @@
+SIZE OF VECTOR
+
 #include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<char>nums ={'a','b','t','g'};
+
+        cout << nums.size() <<endl;
+
+PUSH BACK    
+
+return (0);
+}#include<iostream>
 #include<vector>
 using namespace std;
 int main(){
@@ -8,3 +21,70 @@ int main(){
 
 return (0);
 }
+
+POP BACK
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<char>nums ={'a','b','t'};
+
+    cout << nums.size() <<endl;
+
+       nums.pop_back();
+
+        cout << nums.size() <<endl;
+
+return (0);
+}
+
+AT (to find value at that index)
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<char>nums ={'a','b','t'};
+
+    cout << nums.size() <<endl;
+
+       nums.pop_back();
+
+        cout << nums.size() <<endl;
+        cout << nums.at(0) << endl;
+
+return (0);
+}
+
+FRONT
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<char>nums ={'a','b','t'};
+
+       nums.pop_back();
+    
+        cout << nums.front() << endl;
+
+return (0);
+}
+
+BACK
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main(){
+    vector<char>nums ={'a','b','t'};
+
+       nums.pop_back();
+    
+        cout << nums.back() << endl;
+
+return (0);
+}
+
+
