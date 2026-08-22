@@ -1,0 +1,115 @@
+#include<iostream>
+#include<climits>
+#include<vector>
+using namespace std;
+
+vector<int> pairsum(vector<int>nums,int target){
+    vector<int>vec;
+    int n = nums.size();
+
+for(int i=0;i<n;i++){
+    for(int j=i+1;j<n;j++)
+        {
+        if(nums[i]+nums[j]==target){
+        vec.push_back(i);
+        vec.push_back(j);
+        return vec;}
+}
+}
+return vec;
+}
+int main(){
+
+
+   vector<int>nums = {7,2,3,4,5,6};
+   int target = 5;
+  vector<int>vec = pairsum(nums,target);
+   cout<<vec[0] <<","<<vec[1]<<endl;
+
+return (0);
+}
+
+OPTIMIZED
+
+#include<iostream>
+#include<climits>
+#include<vector>
+using namespace std;
+
+vector<int> pairsum(vector<int>nums,int target){
+   int n = nums.size();
+  int i = 0;
+  int j= n-1;
+  vector<int>vec;
+  while(i<j){
+       int pairsum =nums[i]+nums[j];
+  if(pairsum>target)
+    {
+    j--;
+    }
+
+  else if(pairsum<target)
+  {
+      i++;
+  }
+  else
+    {
+       vec.push_back(i);
+       vec.push_back(j);
+       return vec;
+  }
+
+  }
+return vec;
+}
+int main(){
+
+
+   vector<int>nums = {1,2,3,4,5,6};
+   int target = 5;
+  vector<int>vec = pairsum(nums,target);
+   cout<<vec[0] <<","<<vec[1]<<endl;
+
+return (0);
+}
+
+Moore's Voting Algorithm
+
+#include<iostream>
+#include<climits>
+#include<vector>
+using namespace std;
+
+int majority(vector<int>nums){
+    int freq =0;
+    int ans =0;
+    int n = nums.size();
+    for(int i=0;i<n;i++)
+    {
+
+       if(freq==0){
+
+        ans = nums[i];
+       }
+        if(ans==nums[i])
+        {
+            freq++;
+        }
+        else{
+            freq--;
+        }
+    }
+    return ans;
+    };
+
+
+int main(){
+
+
+   vector<int>nums = {1,2,2,16,5,7,5,1,2,1,1,5,5,5,5,5,5,1};
+ int ans = majority(nums);
+   cout<<ans<<endl;
+
+return (0);
+}
+
